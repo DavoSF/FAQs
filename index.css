@@ -198,6 +198,17 @@ body {
     max-height: 8px;
 }
 
+@media (max-width: 570px) {
+    .woman-mobile {
+        top: -260px;
+        left: -30px;
+    }
+
+    .bg-pattern-mobile {
+        max-width: 290px;
+    }
+}
+
 @media (min-width: 1200px) {
     .box {
         display: block;
