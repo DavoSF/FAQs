@@ -112,45 +112,47 @@ body {
 }
 /* FIN RESET */
 
-picture .box {
+.box {
     display: none;
 }
 
 .container {
     background-color: var(--blanco);
     border-radius: 30px;
-    padding: 0px 30px 40px 30px;
-    margin: 120px 0px;    
+    padding: 0px 30px 50px 30px;
+    margin: 180px 0px;    
     box-shadow: 0px 15px 85px -5px hsl(237, 12%, 33%);
     display: flex;
     flex-flow: column;
     align-items: center;
-    min-width: 310px;
 }
 
 .image {
+    width: 90%;
     display: inherit;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .image picture {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    text-align: center;
 }
 
 .bg-pattern-mobile {
-    grid-column: 2/12;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .woman-mobile {
-    width: 95%;
-    position: relative;
-    grid-column: 1/13;
-    top: -190px;
-    left: -5px;
-}
-
-.info {
-    margin-top: -180px;
+    width: 442px;
+    position: absolute;
+    left: -50px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    top: -350px;
 }
 
 .question-card {
@@ -172,6 +174,12 @@ picture .box {
     align-items: center;
 }
 
+.question-card .title .question:hover {
+    color: hsl(14, 88%, 65%);
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .question-card .title h2 {
     font-size: .75em;
     font-weight: 400;
@@ -182,9 +190,57 @@ picture .box {
     color: hsl(240, 6%, 50%);
     font-size: .6em;
     margin-top: 10px;
+    width: 95%;
 }
 
 .question-card .arrow {
     max-width: 10px;
     max-height: 8px;
+}
+
+@media (min-width: 1200px) {
+    .box {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        max-width: 100px;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
+        padding: 0px;
+    }
+    
+    .image {
+        max-width: 50%;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-position: left -600px top -400px;
+        background-repeat: no-repeat;
+    }
+
+    /* .image .bg-pattern-mobile {
+        position: relative;
+        z-index: 0;
+        left: -50%;
+        top: -30%;     
+    } */
+
+    .image picture {
+        
+    }
+
+    .woman-mobile {
+        width: 60%;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 5;
+    }
+
+    .info {
+        margin: 0px;
+        max-width: 50%;
+    }
 }
