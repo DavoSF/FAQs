@@ -103,12 +103,14 @@ svg {
 }
 
 body {
+    max-width: 1100px;
     min-height: 100vh;
     font-size: 100%;
     font-family: var(--tipo-principal);
     color: var(--negro);
     background: linear-gradient(0deg, hsl(240, 73%, 65%), hsl(273, 75%, 66%));
     padding: 30px;
+    margin: 0px auto;
 }
 /* FIN RESET */
 
@@ -136,7 +138,6 @@ body {
 
 .image picture {
     position: relative;
-    text-align: center;
 }
 
 .bg-pattern-mobile {
@@ -153,6 +154,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     top: -350px;
+}
+
+.info {
+    width: 80%;
 }
 
 .question-card {
@@ -209,49 +214,63 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
     .box {
+        max-width: 150px;
         display: block;
         position: absolute;
-        z-index: 1;
-        max-width: 100px;
+        z-index: 5;
+        top: 415px;
+        left: 0px;
+        right: 740px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .container {
+        max-height: 500px;
         display: flex;
         flex-flow: row nowrap;
         overflow: hidden;
         padding: 0px;
+        margin: 180px 150px;
+        gap: 50px;
     }
-    
+
     .image {
         max-width: 50%;
-        background-image: url(./images/bg-pattern-desktop.svg);
-        background-position: left -600px top -400px;
-        background-repeat: no-repeat;
     }
-
-    /* .image .bg-pattern-mobile {
-        position: relative;
-        z-index: 0;
-        left: -50%;
-        top: -30%;     
-    } */
 
     .image picture {
-        
+        position: relative;
     }
-
+    
     .woman-mobile {
-        width: 60%;
+        width: 380px;
+        min-width: 380px;
+        max-width: 700px;
         position: relative;
         top: 0px;
-        left: 0px;
-        z-index: 5;
+        left: -65px;
+        z-index: 1;
+    }
+
+    .bg-pattern-mobile {
+        z-index: 0;
+        position: absolute;
+        width: 945px;
+        max-width: 1000px;
+        top: -390px;
+        left: -630px;
     }
 
     .info {
-        margin: 0px;
+        margin: 40px 30px 80px;
         max-width: 50%;
+        align-self: center;
+    }
+
+    .heading {
+        text-align: left;
     }
 }
